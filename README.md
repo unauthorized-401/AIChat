@@ -1,16 +1,13 @@
-## Spring AI
-
-Information
-- Develop messenger service wit spring-ai
-
-Function
-- Join membership
-- Login/Logout
-- Chat with AI
+## AI Chat
 
 Goal
-- Try the spring-ai framework
+- Develop messenger service with **spring-ai** framework
+
+Function
+- Join the membership
+- Login and Logout
+- Chat with AI
 
 Reference
-- Document : https://docs.spring.io/spring-ai/reference/index.html
-- GitHub Repository : https://github.com/spring-projects/spring-ai
+- [Document](https://docs.spring.io/spring-ai/reference/index.html)
+- [GitHub Repository](https://github.com/spring-projects/spring-ai)
