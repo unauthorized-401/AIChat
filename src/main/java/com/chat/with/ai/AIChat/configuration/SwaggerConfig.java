@@ -15,11 +15,11 @@ public class SwaggerConfig {
     @Bean
     public GroupedOpenApi chatOpenApi() {
         String[] paths = {
-                "/common/user/join",            // 회원가입
-                "/common/user/login",           // 로그인
-                "/common/user/logout",          // 로그아웃
-                "/common/chat/request",         // 채팅 보내기
-                "/common/chat/response",        // 답변 받기
+                "/common/account/join",             // 회원가입
+                "/common/account/login",            // 로그인
+                "/common/account/logout",           // 로그아웃
+                "/common/chat/request",             // 채팅 보내기
+                "/common/chat/response",            // 답변 받기
         };
 
         return GroupedOpenApi.builder()
