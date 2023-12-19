@@ -18,11 +18,61 @@ Environment
 - IntelliJ
 - Java 17 + Spring Boot 3.2.0
 - H2 2.2.224
+- [Swagger](localhost:8080/swagger-ui.html)
 
 Database
 
-|Table|Column|Description|
-|-----|------|-----------|
-|ACCOUNT|USER_NAME|-|
-|ACCOUNT|USER_ID|UNIQUE ID|
-|ACCOUNT|PASSWORD|-|
+|TABLE|COLUMN|TYPE|DESCRIPTION|
+|-----|------|----|-----------|
+|ACCOUNT|USER_NAME|STRING|-|
+|ACCOUNT|USER_ID|STRING|UNIQUE ID|
+|ACCOUNT|PASSWORD|STRING|-|
+|CHAT|ID|LONG|UNIQUE ID|
+|CHAT|TYPE|INT|0: AI, 1: USER|
+|CHAT|MESSAGE|STRING|-|
+|CHAT|DATE|DATE|-|
+
+API
+- Join the membership
+```
+POST /common/account/join
+
+{
+  "userName": "jiwon",
+  "userId": "jiwon",
+  "password": "jiwon"
+}
+```
+
+- Login
+```
+POST /common/account/login
+
+{
+  "userId": "jiwon",
+  "password": "jiwon"
+}
+```
+
+- Logout
+```
+GET /common/account/logout/{userId}
+```
+
+- Send the request
+```
+POST /common/chat/request
+
+{
+  "request": "what's your name?"
+}
+```
+
+- Get response
+```
+POST /common/chat/response
+
+{
+  "response": "my name is olivia"
+}
+```
