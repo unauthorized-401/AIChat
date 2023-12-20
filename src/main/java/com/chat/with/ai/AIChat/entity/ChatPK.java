@@ -1,18 +1,19 @@
 package com.chat.with.ai.AIChat.entity;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Date;
+
 @Getter @Setter
 public class ChatPK {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
     private String userId;
+    private Date date;
 
-    public ChatPK (String userId) {
+    public ChatPK () {}
+
+    public ChatPK (String userId, Date date) {
         this.userId = userId;
+        this.date = date;
     }
 }

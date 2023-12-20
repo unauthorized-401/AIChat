@@ -17,6 +17,4 @@ public class Chat {
     private int type;
 
     private String message;
-
-    private Date date;
 }

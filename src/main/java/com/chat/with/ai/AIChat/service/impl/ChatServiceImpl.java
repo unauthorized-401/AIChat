@@ -32,10 +32,9 @@ public class ChatServiceImpl<T extends Chat> implements ChatService<T> {
 
         try {
             Chat chat = new Chat();
-            chat.setChatPK(new ChatPK(messageParam.getUserId()));
+            chat.setChatPK(new ChatPK(messageParam.getUserId(), new Date()));
             chat.setType(1);
             chat.setMessage(messageParam.getMessage());
-            chat.setDate(new Date());
 
             chatRepository.save(chat);
 
