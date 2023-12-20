@@ -17,7 +17,6 @@ Reference
 - [GitHub Repository](https://github.com/spring-projects/spring-ai)
 - [HTML Template](https://www.bootdey.com/snippets/view/animated-chat-window#html)
 
----
 
 ## 2) Develop Information
 
@@ -35,6 +34,7 @@ Database
 |ACCOUNT|USER_ID|STRING|UNIQUE ID|
 |ACCOUNT|PASSWORD|STRING|-|
 |CHAT|ID|LONG|UNIQUE ID|
+|CHAT|USER_ID|STRING|UNIQUE ID|
 |CHAT|TYPE|INT|0: AI, 1: USER|
 |CHAT|MESSAGE|STRING|-|
 |CHAT|DATE|DATE|-|
@@ -84,7 +84,6 @@ POST /common/chat/response
 }
 ```
 
----
 
 ## 3) Service Information
 
