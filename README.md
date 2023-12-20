@@ -71,16 +71,7 @@ GET /common/account/logout/{userId}
 POST /common/chat/request
 
 {
-  "request": "what's your name?"
-}
-```
-
-- Get response
-```
-POST /common/chat/response
-
-{
-  "response": "my name is olivia"
+  "message": "what's your name?"
 }
 ```
 

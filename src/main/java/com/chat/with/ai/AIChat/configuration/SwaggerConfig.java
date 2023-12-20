@@ -20,7 +20,7 @@ public class SwaggerConfig {
                 "/common/account/logout",           // 로그아웃
                 "/common/account/list",             // 회원 조회
                 "/common/chat/request",             // 채팅 보내기
-                "/common/chat/response",            // 답변 받기
+                "/common/chat/list",                // 모든 채팅 받기
         };
 
         return GroupedOpenApi.builder()

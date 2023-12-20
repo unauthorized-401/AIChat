@@ -6,4 +6,6 @@ import lombok.Setter;
 @Getter @Setter
 public class ResponseParam {
     private String response;
+    private int statusCode;
+    private String statusMessage;
 }
