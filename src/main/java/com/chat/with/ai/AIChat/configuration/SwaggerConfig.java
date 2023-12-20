@@ -18,6 +18,7 @@ public class SwaggerConfig {
                 "/common/account/join",             // 회원가입
                 "/common/account/login",            // 로그인
                 "/common/account/logout",           // 로그아웃
+                "/common/account/list",             // 회원 조회
                 "/common/chat/request",             // 채팅 보내기
                 "/common/chat/response",            // 답변 받기
         };
