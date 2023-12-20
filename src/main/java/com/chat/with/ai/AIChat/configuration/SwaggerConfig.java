@@ -17,10 +17,9 @@ public class SwaggerConfig {
         String[] paths = {
                 "/common/account/join",             // 회원가입
                 "/common/account/login",            // 로그인
-                "/common/account/logout",           // 로그아웃
                 "/common/account/list",             // 회원 조회
                 "/common/chat/request",             // 채팅 보내기
-                "/common/chat/list",                // 모든 채팅 받기
+                "/common/chat/list",                // 채팅 조회
         };
 
         return GroupedOpenApi.builder()

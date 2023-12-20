@@ -73,25 +73,6 @@ public class AccountController {
     }
 
     /*
-        로그아웃
-     */
-    @Operation(tags={"Account"}, summary="Logout")
-    @GetMapping(value="logout")
-    public ResponseEntity logout(@RequestParam(required = true) String userId) {
-        try {
-            return new ResponseEntity(HttpStatus.OK);
-
-        } catch (Exception e) {
-            log.error("Exception : {}", e.getMessage());
-
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .header("X-Exception-Type", e.getClass().toString())
-                    .header("X-Exception-Cause", e.getMessage())
-                    .build();
-        }
-    }
-
-    /*
         회원 조회
      */
     @Operation(tags={"Account"}, summary="Select the account list")

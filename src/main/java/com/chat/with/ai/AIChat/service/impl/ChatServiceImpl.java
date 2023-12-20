@@ -52,7 +52,7 @@ public class ChatServiceImpl<T extends Chat> implements ChatService<T> {
     }
 
     /*
-        모든 채팅
+        채팅 조회
      */
     @Override
     public List<T> getChatList() {

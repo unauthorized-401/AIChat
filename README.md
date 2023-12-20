@@ -7,10 +7,8 @@ Goal
 
 Function
 - Join the membership
-- Login and Logout
+- Login
 - Chat with AI
-  - Start new
-  - Continue previous
 
 Reference
 - [Document](https://docs.spring.io/spring-ai/reference/index.html)
@@ -59,11 +57,6 @@ POST /common/account/login
   "userId": "jiwon",
   "password": "jiwon"
 }
-```
-
-- Logout
-```
-GET /common/account/logout/{userId}
 ```
 
 - Send the request
