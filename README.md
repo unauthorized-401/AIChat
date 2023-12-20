@@ -15,6 +15,7 @@ Function
 Reference
 - [Document](https://docs.spring.io/spring-ai/reference/index.html)
 - [GitHub Repository](https://github.com/spring-projects/spring-ai)
+- [HTML Template](https://www.bootdey.com/snippets/view/animated-chat-window#html)
 
 ---
 
