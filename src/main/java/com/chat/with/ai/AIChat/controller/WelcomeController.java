@@ -12,7 +12,17 @@ import org.springframework.web.bind.annotation.*;
 public class WelcomeController {
 
     @GetMapping(value="/")
-    public String welcome() {
+    public String login() {
         return "login";
+    }
+
+    @GetMapping(value="/sign_up")
+    public String sign_up() {
+        return "sign_up";
+    }
+
+    @GetMapping(value="/chat")
+    public String chat() {
+        return "chat";
     }
 }
