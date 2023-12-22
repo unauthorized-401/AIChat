@@ -126,11 +126,11 @@
 		})
 		.then(response => response.json())
 		.then(data => {
-			console.log("API Response: ", data);
-
 			if (data.statusCode == '200') {
-				alert();
+				alert(data.statusMessage);
+				window.location.href = "http://localhost:8080/chat";
 			} else {
+				console.log("API Response: ", data);
 				alert(data.statusMessage);
 			}
 		})
@@ -138,6 +138,12 @@
 			console.error("API Error: ", error);
 		});
 	}
+
+	document.addEventListener("keyup", function(event) {
+        if (event.key === "Enter") {
+            login_process();
+        }
+    });
 </script>
 </body>
 </html>

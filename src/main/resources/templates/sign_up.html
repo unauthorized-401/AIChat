@@ -100,7 +100,7 @@
 	<div class="message_input_wrapper">
 		<input id="password" class="message_input" placeholder="Type your Password" />
 	</div>
-	<div class="register_btn">
+	<div class="register_btn" onclick="sign_up_process()">
 		<div class="icon"></div>
 		<div class="text">Register</div>
 	</div>
@@ -110,7 +110,45 @@
 </div>
 
 <script>
+	function sign_up_process() {
+		var username = document.getElementById("username").value;
+		var userid = document.getElementById("userid").value;
+		var password = document.getElementById("password").value;
 
+		var api = "http://localhost:8080/common/account/join";
+		var data = {
+			userName: username,
+			userId: userid,
+			password: password
+		};
+
+		fetch(api, {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(data)
+		})
+		.then(response => response.json())
+		.then(data => {
+			if (data.statusCode == '200') {
+				alert(data.statusMessage);
+				window.location.href = "http://localhost:8080";
+			} else {
+				console.log("API Response: ", data);
+				alert(data.statusMessage);
+			}
+		})
+		.catch(error => {
+			console.error("API Error: ", error);
+		});
+	}
+
+	document.addEventListener("keyup", function(event) {
+        if (event.key === "Enter") {
+            sign_up_process();
+        }
+    });
 </script>
 </body>
 </html>
