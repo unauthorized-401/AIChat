@@ -127,7 +127,6 @@
 		.then(response => response.json())
 		.then(data => {
 			if (data.statusCode == '200') {
-				alert(data.statusMessage);
 				window.location.href = "http://localhost:8080/chat";
 			} else {
 				console.log("API Response: ", data);

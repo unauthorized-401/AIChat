@@ -132,7 +132,7 @@
 		.then(response => response.json())
 		.then(data => {
 			if (data.statusCode == '200') {
-				alert(data.statusMessage);
+				alert(data.statusMessage + " Go to the login page.");
 				window.location.href = "http://localhost:8080";
 			} else {
 				console.log("API Response: ", data);
