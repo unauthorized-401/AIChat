@@ -6,14 +6,13 @@ Goal
 - Develop messenger service with **spring-ai** framework
 
 Function
-- Join the membership
-- Login
+- Sign Up
+- Log In
 - Chat with AI
 
 Reference
 - [Document](https://docs.spring.io/spring-ai/reference/index.html)
 - [GitHub Repository](https://github.com/spring-projects/spring-ai)
-- [HTML Template](https://www.bootdey.com/snippets/view/animated-chat-window#html)
 
 
 ## 2) Develop Information
@@ -38,7 +37,7 @@ Database
 |CHAT|DATE|DATE|-|
 
 API
-- Join the membership
+- Sign Up
 ```
 POST /common/account/join
 
@@ -49,7 +48,7 @@ POST /common/account/join
 }
 ```
 
-- Login
+- Log In
 ```
 POST /common/account/login
 
@@ -59,7 +58,7 @@ POST /common/account/login
 }
 ```
 
-- Send the request
+- Chat with AI
 ```
 POST /common/chat/request
 
