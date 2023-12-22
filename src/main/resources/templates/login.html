@@ -97,7 +97,7 @@
 	<div class="message_input_wrapper">
 		<input id="password" class="message_input" placeholder="Type your Password" />
 	</div>
-	<div class="login_btn">
+	<div class="login_btn" onclick="login_process()">
 		<div class="icon"></div>
 		<div class="text">Login</div>
 	</div>
@@ -107,7 +107,37 @@
 </div>
 
 <script>
+	function login_process() {
+		var userid = document.getElementById("userid").value;
+		var password = document.getElementById("password").value;
 
+		var api = "http://localhost:8080/common/account/login";
+		var data = {
+			userId: userid,
+			password: password
+		};
+
+		fetch(api, {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(data)
+		})
+		.then(response => response.json())
+		.then(data => {
+			console.log("API Response: ", data);
+
+			if (data.statusCode == '200') {
+				alert();
+			} else {
+				alert(data.statusMessage);
+			}
+		})
+		.catch(error => {
+			console.error("API Error: ", error);
+		});
+	}
 </script>
 </body>
 </html>
