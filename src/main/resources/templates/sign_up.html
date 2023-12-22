@@ -54,8 +54,8 @@
 			outline-width: 0;
 		}
 		
-		/* Login Button */
-		.login_btn {
+		/* Register Button */
+		.register_btn {
 			width: 140px;
 			height: 40px;
 			display: inline-block;
@@ -69,26 +69,28 @@
 			margin: 10px;
 			margin-left: 180px;
 		}
-		.login_btn:hover {
+		.register_btn:hover {
 			color: #a3d063;
 			background-color: #fff;
 		}
-		.login_btn .text {
+		.register_btn .text {
 			font-size: 18px;
 			font-weight: 300;
 			display: inline-block;
 			line-height: 35px;
 		}
 
-		/* Sign Up Link */
-		.sign_up {
-			margin-left: 130px;
+		/* Login Link */
+		.login_link {
+			text-align: center;
 		}
     </style>
 </head>
 <body>
 <div class="login_window">
-	<img src="/images/chatgpt.png" class="image" />
+	<a href="/">
+		<img src="/images/chatgpt.png" class="image" />
+	</a>
 	<div class="message_input_wrapper">
 		<input id="username" class="message_input" placeholder="Type your Name" />
 	</div>
@@ -98,9 +100,12 @@
 	<div class="message_input_wrapper">
 		<input id="password" class="message_input" placeholder="Type your Password" />
 	</div>
-	<div class="login_btn">
+	<div class="register_btn">
 		<div class="icon"></div>
 		<div class="text">Register</div>
+	</div>
+	<div class="login_link">
+		I have an account. <a href="/">Login</a>
 	</div>
 </div>
 

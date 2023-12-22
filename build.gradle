@@ -35,6 +35,9 @@ dependencies {
 
 	// Template
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+
+	// DevTools
+	runtimeOnly 'org.springframework.boot:spring-boot-devtools'
 }
 
 tasks.named('test') {
