@@ -13,7 +13,7 @@ Reference
 - [GitHub Repository](https://github.com/spring-projects/spring-ai)
 
 Source
-- [Frontent](https://www.bootdey.com/snippets/view/animated-chat-window#html)
+- [Frontend Template](https://www.bootdey.com/snippets/view/animated-chat-window)
 
 
 ## 2) Develop Information
@@ -39,7 +39,7 @@ Database
 API
 - You can use [Swagger](localhost:8080/swagger-ui/index.html) page
 
-<img src="./README/swagger.png" width="60%"></img>
+<img src="./README/swagger.png" width="100%"></img>
 
 1) Sign Up
 ```
