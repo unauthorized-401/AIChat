@@ -1,148 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-	<title>AI Chat</title>
-	<style>
-        * {
-			box-sizing: border-box;
-		}
-		
-        body {
-			background-color: #edeff2;
-			font-family: "Calibri", "Roboto", sans-serif;
-		}
-
-		.login_window {
-			position: absolute;
-			width: calc(100% - 0px);
-			left: 50%;
-			top: 50%;
-			max-width: 500px;
-			height: 500px;
-			transform: translateX(-50%) translateY(-50%);
-			overflow: hidden;
-		}
-
-		.image {
-			border-radius: 6px;
-			width: 170px;
-			margin-left: 160px;
-			margin-bottom: 20px;
-		}
-		
-		/* Login Text */
-		.message_input_wrapper {
-			display: inline-block;
-			height: 50px;
-			border-radius: 25px;
-			border: 1px solid #bcbdc0;
-			width: calc(100% - 160px);
-			position: relative;
-			padding: 0 20px;
-			margin-left: 80px;
-			background-color: white;
-		}
-		.message_input_wrapper .message_input {
-			border: none;
-			height: 100%;
-			box-sizing: border-box;
-			width: calc(100% - 40px);
-			position: absolute;
-			outline-width: 0;
-		}
-		
-		/* Login Button */
-		.login_btn {
-			width: 140px;
-			height: 40px;
-			display: inline-block;
-			border-radius: 50px;
-			background-color: #a3d063;
-			border: 2px solid #a3d063;
-			color: #fff;
-			cursor: pointer;
-			transition: all 0.2s linear;
-			text-align: center;
-			margin: 10px;
-			margin-left: 180px;
-		}
-		.login_btn:hover {
-			color: #a3d063;
-			background-color: #fff;
-		}
-		.login_btn .text {
-			font-size: 18px;
-			font-weight: 300;
-			display: inline-block;
-			line-height: 35px;
-		}
-
-		/* Sign Up Link */
-		.sign_up_link {
-			text-align: center;
-		}
-    </style>
-</head>
-<body>
-<div class="login_window">
-	<a href="/">
-		<img src="/images/chatgpt.png" class="image" />
-	</a>
-	<div class="message_input_wrapper">
-		<input id="userid" class="message_input" placeholder="Type your ID" />
-	</div>
-	<div class="message_input_wrapper">
-		<input id="password" class="message_input" placeholder="Type your Password" />
-	</div>
-	<div class="login_btn" onclick="login_process()">
-		<div class="icon"></div>
-		<div class="text">Login</div>
-	</div>
-	<div class="sign_up_link">
-		Don't have an account yet? <a href="/sign_up">Sign Up</a>
-	</div>
-</div>
-
-<script>
-	function login_process() {
-		var userid = document.getElementById("userid").value;
-		var password = document.getElementById("password").value;
-
-		var api = "http://localhost:8080/common/account/login";
-		var data = {
-			userId: userid,
-			password: password
-		};
-
-		fetch(api, {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json'
-			},
-			body: JSON.stringify(data)
-		})
-		.then(response => response.json())
-		.then(data => {
-			if (data.statusCode == '200') {
-				window.location.href = "http://localhost:8080/chat";
-			} else {
-				console.log("API Response: ", data);
-				alert(data.statusMessage);
-			}
-		})
-		.catch(error => {
-			console.error("API Error: ", error);
-		});
-	}
-
-	document.addEventListener("keyup", function(event) {
-        if (event.key === "Enter") {
-            login_process();
-        }
-    });
-</script>
-</body>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+		<link rel="stylesheet" href="/css/login.css">
+		<script src="/js/login.js"></script>
+		<title>AI Chat</title>
+	</head>
+	<body>
+		<div class="login_window">
+			<a href="/">
+				<img src="/images/chatgpt.png" class="image" />
+			</a>
+			<div class="message_input_wrapper">
+				<input id="userid" class="message_input" placeholder="Type your ID" />
+			</div>
+			<div class="message_input_wrapper">
+				<input id="password" class="message_input" placeholder="Type your Password" />
+			</div>
+			<div class="login_btn" onclick="login_process()">
+				<div class="icon"></div>
+				<div class="text">Login</div>
+			</div>
+			<div class="sign_up_link">
+				Don't have an account yet? <a href="/sign_up">Sign Up</a>
+			</div>
+		</div>
+	</body>
 </html>
