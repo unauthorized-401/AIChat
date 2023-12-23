@@ -12,6 +12,9 @@ Reference
 - [Document](https://docs.spring.io/spring-ai/reference/index.html)
 - [GitHub Repository](https://github.com/spring-projects/spring-ai)
 
+Source
+- [Frontent](https://www.bootdey.com/snippets/view/animated-chat-window#html)
+
 
 ## 2) Develop Information
 
@@ -19,7 +22,6 @@ Environment
 - IntelliJ
 - Java 17 + Spring Boot 3.2.0
 - H2 2.2.224
-- [Swagger](localhost:8080/swagger-ui.html)
 
 Database
 
@@ -35,7 +37,11 @@ Database
 |CHAT|DATE|DATE|-|
 
 API
-- Sign Up
+- You can use [Swagger](localhost:8080/swagger-ui/index.html) page
+
+<img src="./README/swagger.png" width="60%"></img>
+
+1) Sign Up
 ```
 POST /common/account/join
 
@@ -46,7 +52,7 @@ POST /common/account/join
 }
 ```
 
-- Log In
+2) Log In
 ```
 POST /common/account/login
 
@@ -56,7 +62,7 @@ POST /common/account/login
 }
 ```
 
-- Chat with AI
+3) Chat with AI
 ```
 POST /common/chat/request
 
