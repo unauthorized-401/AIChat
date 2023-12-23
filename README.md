@@ -72,19 +72,19 @@ POST /common/chat/request
 
 How to build & run
 ```
-// 1) bring sources
+// bring sources
 git clone https://github.com/unauthorized-401/AIChat.git
 
-// 2) move to project and build
+// move to project and build
 cd AIChat
 gradlew build
 
-// 3) run project
+// run project
 cd build/libs
 java -jar aichat-0.0.1-SNAPSHOT.jar
 ```
 
 Test
-- You can use [Swagger](http://localhost:8080/swagger-ui/index.html) page
+- You can test with [swagger](http://localhost:8080/swagger-ui/index.html) page
 
 <img src="./README/swagger.png" width="100%"></img>
