@@ -37,10 +37,6 @@ Database
 |CHAT|DATE|DATE|-|
 
 API
-- You can use [Swagger](localhost:8080/swagger-ui/index.html) page
-
-<img src="./README/swagger.png" width="100%"></img>
-
 1) Sign Up
 ```
 POST /common/account/join
@@ -87,3 +83,8 @@ gradlew build
 cd build/libs
 java -jar aichat-0.0.1-SNAPSHOT.jar
 ```
+
+Test
+- You can use [Swagger](http://localhost:8080/swagger-ui/index.html) page
+
+<img src="./README/swagger.png" width="100%"></img>
