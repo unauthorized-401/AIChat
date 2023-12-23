@@ -1,5 +1,3 @@
-# Start chatting with AI on Messenger!
-
 ## 1) Project Information
 
 Goal
